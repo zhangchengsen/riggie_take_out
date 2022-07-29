@@ -1,11 +1,15 @@
-package com.chanokh.rigge;
+package com.chanokh.reggie;
 
 import lombok.extern.slf4j.Slf4j;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @Slf4j  // 能使用log了
 @SpringBootApplication
+@MapperScan("com.chanokh.reggie.mapper")
+@ServletComponentScan
 public class RiggeApplication {
 
     public static void main(String[] args) {

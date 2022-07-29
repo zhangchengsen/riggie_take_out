@@ -1,4 +1,4 @@
-package com.chanokh.rigge;
+package com.chanokh.reggie;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
