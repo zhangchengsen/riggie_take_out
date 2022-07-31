@@ -4,7 +4,9 @@ function loginApi(data) {
       'method': 'post',
       data
     })
-  }
+}
+
+
 
 function loginoutApi() {
   return $axios({

@@ -1,5 +1,6 @@
 package com.chanokh.reggie.service;
 
+import com.chanokh.reggie.dto.DishDto;
 import com.chanokh.reggie.entity.Dish;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -9,5 +10,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
 * @createDate 2022-07-27 16:49:25
 */
 public interface DishService extends IService<Dish> {
+    public  void saveWithFlavor(DishDto dishDto);
 
+    public  void updateWithFlavor(DishDto dishDto);
+
+    public DishDto getByIdWithFlavor(Long id);
 }

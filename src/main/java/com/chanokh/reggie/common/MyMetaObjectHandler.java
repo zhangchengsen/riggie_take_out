@@ -13,10 +13,15 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
         log.info("公共字段 insert");
-        metaObject.setValue("createTime",new Date());
-        metaObject.setValue("updateTime",new Date());
-        metaObject.setValue("createUser", BaseContext.getCuurentId());
-        metaObject.setValue("updateUser", BaseContext.getCuurentId());
+        try{
+            metaObject.setValue("createTime",new Date());
+            metaObject.setValue("updateTime",new Date());
+            metaObject.setValue("createUser", BaseContext.getCuurentId());
+            metaObject.setValue("updateUser", BaseContext.getCuurentId());
+        }
+       catch (Exception e) {
+
+       }
     }
 
     @Override

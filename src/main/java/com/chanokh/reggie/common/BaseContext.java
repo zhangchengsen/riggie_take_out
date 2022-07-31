@@ -8,4 +8,6 @@ public class BaseContext {
     public static Long getCuurentId() {
         return threadLocal.get();
     }
+
 }
+

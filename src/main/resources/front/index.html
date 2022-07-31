@@ -291,13 +291,16 @@
           },
           mounted(){
             this.initData()
+
           },
           methods:{
             //初始化数据
             initData(){
+              //
               Promise.all([categoryListApi(),cartListApi({})]).then(res=>{
                 //获取分类数据
                 if(res[0].code === 1){
+                  console.log('res',res)
                   this.categoryList = res[0].data
                   if(Array.isArray(res[0].data) && res[0].data.length > 0){
                     this.categoryId = res[0].data[0].id
@@ -335,6 +338,7 @@
               }
               const res = await dishListApi({categoryId:this.categoryId,status:1})
               if(res.code === 1){
+                console.log("dishlist",res.data)
                 let dishList = res.data
                 const cartData  = this.cartData
                 if(dishList.length > 0 && cartData.length > 0){

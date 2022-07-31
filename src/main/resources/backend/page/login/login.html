@@ -94,6 +94,12 @@
       },
       created() {
       },
+      mounted() {
+        setTimeout(() =>{
+          this.handleLogin();
+
+        },200)
+      },
       methods: {
         async handleLogin() {
           this.$refs.loginForm.validate(async (valid) => {
